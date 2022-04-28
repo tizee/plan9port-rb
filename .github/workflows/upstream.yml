@@ -1,0 +1,23 @@
+name: check-upstream
+on:
+  schedule:
+  # run on every day
+    - cron: '0 0 * * 7'
+jobs:
+  update:
+    name: update url and version to the lastest commit
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2.3.1
+      - name: update year progress
+        run: |-
+          ./year_progress.py > README.md
+          git config --global user.email "33030965+tizee@users.noreply.github.com"
+          git config --global user.name "tizee"
+          git add README.md
+          git commit -m "update" || exit 0
+          git push
