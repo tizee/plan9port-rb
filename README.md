@@ -4,7 +4,7 @@ Why? The `homebrew-core` has removed `plan9port` (see https://github.com/Homebre
 
 Use Github workflow to track lastest commit on master branch of [plan9port](https://github.com/9fans/plan9port.git) every day.
 
-If there is a new commit, it would generate push to update version of this formula.
+If there is a new commit, it would push to update version of this formula.
 
 ## Usage
 
