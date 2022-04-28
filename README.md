@@ -6,8 +6,8 @@ Use Github workflow to track lastest commit on master branch of [plan9port](http
 
 If there is a new commit, it would generate push to update version of this formula.
 
-[brew#6478](https://github.com/Homebrew/brew/issues/6478)
-[homebrew-core#38394](https://github.com/Homebrew/homebrew-core/pull/38394)
+[brew#6478]: https://github.com/Homebrew/brew/issues/6478)
+[homebrew-core#38394]: https://github.com/Homebrew/homebrew-core/pull/38394
 
 ## Usage
 
