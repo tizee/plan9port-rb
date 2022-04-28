@@ -3,9 +3,8 @@ class Plan9port < Formula
   desc "Plan 9 from User Space (aka plan9port) is a port of many Plan 9 programs from their native Plan 9 environment to Unix-like operating systems. "
   homepage "https://9fans.github.io/plan9port/"
   head "https://github.com/9fans/plan9port.git", branch: "master"
-  url "https://github.com/9fans/plan9port/archive/bab7b73b85f865d20a5c4f2d78ac9e81b3d39109.zip",
-  version: "2022-04-28-bab7b73b",
-  keg_only "Plan9Port includes Unix system programs may override their OS X equivalents."
+  url "https://github.com/9fans/plan9port/archive/bab7b73b85f865d20a5c4f2d78ac9e81b3d39109.zip"
+  version "2022-04-28-bab7b73b"
 
   def install
     # 1. build with plan9port script
@@ -15,7 +14,7 @@ class Plan9port < Formula
     system "./INSTALL"
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/9"
-    prefix.install Dir[libexec/"mac/*.app"]
+    prefix.install Dir[libexec/"*.app"]
   end
 
   def caveats; <<~EOS
@@ -25,6 +24,10 @@ class Plan9port < Formula
     "9", which has been installed into the Homebrew prefix bin.  For example,
     to run Plan 9's ls run:
         # 9 ls
+
+    You should set environment variables $PLAN9 for plan9port:
+      $PLAN9=#{opt_libexec}
+
   EOS
   end
 
