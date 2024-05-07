@@ -51,7 +51,7 @@ def test_latset_commit():
     print(latest_sha)
 
 def main():
-    last_90_days = Date.now()-datetime.timedelta(days=30)
+    last_90_days = Date.now()-datetime.timedelta(days=90)
     # use master branch by default
     latest_sha=get_latest_commit_since(USER, REPO, last_90_days)
     if len(latest_sha) >0:
@@ -59,7 +59,7 @@ def main():
         # render with jinja2 template
         contents=render_jinja2_template(latest_sha)
         if len(contents) > 0:
-            with open("Formula/plan9port.rb","w") as f:
+            with open("./Formula/plan9port.rb","w") as f:
                 f.write(contents)
                 f.close()
     else:
