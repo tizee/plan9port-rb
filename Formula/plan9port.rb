@@ -3,8 +3,8 @@ class Plan9port < Formula
   desc "Plan 9 from User Space (aka plan9port) is a port of many Plan 9 programs from their native Plan 9 environment to Unix-like operating systems. "
   homepage "https://9fans.github.io/plan9port/"
   head "https://github.com/9fans/plan9port.git", branch: "master"
-  url "https://github.com/9fans/plan9port/archive/b5ff0004e2314bfca6c157f0cd6ea21af86e2d02.zip"
-  version "2026-06-01-b5ff0004"
+  url "https://github.com/9fans/plan9port/archive/b36c747d62a690ffb9cff6f17fbe207b23aa4b84.zip"
+  version "2026-06-02-b36c747d"
 
   def install
     # 1. build with plan9port script
