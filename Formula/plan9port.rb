@@ -4,7 +4,7 @@ class Plan9port < Formula
   homepage "https://9fans.github.io/plan9port/"
   head "https://github.com/9fans/plan9port.git", branch: "master"
   url "https://github.com/9fans/plan9port/archive/b6564bd96ca189c69e28797738dad56f91eb5967.zip"
-  version "2026-09-24-b6564bd9"
+  version "2026-09-25-b6564bd9"
 
   def install
     # 1. build with plan9port script
